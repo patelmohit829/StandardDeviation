@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.mohit.standarddeviation.MainActivity"
+    android:background="#009688">
+
+    <ScrollView
+        android:isScrollContainer="false"
+        android:layout_below="@+id/button"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:elevation="1dp"
+        android:layout_width="600dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="#a1e9bb"
+        android:paddingLeft="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:ems="10"
+            android:id="@+id/myTextView"
+            android:gravity="center"
+            android:editable="false"
+            android:hint="Your Numbers will appear here"
+            android:textAllCaps="false"
+            android:elevation="1dp"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="63dp" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/varianceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Variance"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/sdText"
+        android:layout_alignBottom="@+id/sdText"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/sdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Std. Dev."
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/meanText"
+        android:layout_alignBottom="@+id/meanText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:ems="10"
+        android:id="@+id/answer"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_below="@+id/varianceText"
+        android:layout_toEndOf="@+id/scrollView7" />
+
+    <EditText
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:background="@android:color/transparent"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:hint="Enter Number"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/answer"
+        android:layout_toEndOf="@+id/scrollView7"
+        android:layout_marginTop="11dp" />
+
+
+
+
+    <TextView
+        android:id="@+id/meanText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Mean"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/resetButton"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert Number"
+        android:padding="3dp"
+        android:textColor="#009688"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:onClick="mean"
+        android:layout_below="@+id/textField"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#009688"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:padding="3dp"/>
+</RelativeLayout>
